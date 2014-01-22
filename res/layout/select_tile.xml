@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="82dp"
+            android:id="@+id/spot1" android:src="@drawable/spot1" android:layout_row="0" android:layout_column="0"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="0dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot2"
+                 android:src="@drawable/spot2" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignParentTop="true" android:layout_toRightOf="@+id/spot1"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot3"
+                 android:src="@drawable/spot3" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignParentTop="true" android:layout_toRightOf="@+id/spot2"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot4"
+                 android:src="@drawable/spot4" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignParentTop="true" android:layout_toRightOf="@+id/spot3"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot5"
+                 android:src="@drawable/spot5" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignParentTop="true" android:layout_toRightOf="@+id/spot4"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot6"
+                 android:src="@drawable/spot6" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignParentTop="true" android:layout_toRightOf="@+id/spot5"
+                 android:focusableInTouchMode="false"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot7"
+                 android:src="@drawable/spot7" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/spot1" android:layout_alignParentLeft="true"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot8"
+                 android:src="@drawable/spot8" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignTop="@+id/spot7" android:layout_toRightOf="@+id/spot7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/spot9"
+                 android:src="@drawable/spot9" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignTop="@+id/spot8" android:layout_toRightOf="@+id/spot8"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack1"
+                 android:src="@drawable/crack1" android:layout_row="2" android:layout_column="6"
+                 android:layout_alignTop="@+id/spot9" android:layout_toRightOf="@+id/spot9"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack2"
+                 android:src="@drawable/crack2" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/spot4" android:layout_toRightOf="@+id/spot4"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack3"
+                 android:src="@drawable/crack3" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false" android:layout_alignTop="@+id/crack2"
+                 android:layout_toRightOf="@+id/crack2"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack4"
+                 android:src="@drawable/crack4" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/spot7" android:layout_alignParentLeft="true"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack5"
+                 android:src="@drawable/crack5" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/spot7" android:layout_toRightOf="@+id/spot7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack6"
+                 android:src="@drawable/crack6" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/spot8" android:layout_toRightOf="@+id/spot8"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack7"
+                 android:src="@drawable/crack7" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false" android:layout_above="@+id/bamboo2"
+                 android:layout_alignLeft="@+id/crack1"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack8"
+                 android:src="@drawable/crack8" android:layout_row="2" android:layout_column="6"
+                 android:layout_above="@+id/bamboo1" android:layout_toRightOf="@+id/crack7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/crack9"
+                 android:src="@drawable/crack9" android:layout_row="2" android:layout_column="6"
+                 android:layout_above="@+id/bamboo5" android:layout_alignLeft="@+id/bamboo5"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo1"
+                 android:src="@drawable/bamboo1" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/crack7" android:layout_alignParentLeft="true"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo2"
+                 android:src="@drawable/bamboo2" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/crack4" android:layout_toRightOf="@+id/bamboo1"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo3"
+                 android:src="@drawable/bamboo3" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false"
+                 android:layout_alignTop="@+id/bamboo2" android:layout_toRightOf="@+id/bamboo2"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo6"
+                 android:src="@drawable/bamboo5" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/crack7" android:layout_toRightOf="@+id/crack7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo4"
+                 android:src="@drawable/bamboo4" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/crack7" android:layout_alignLeft="@+id/crack7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo5"
+                 android:src="@drawable/bamboo6" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false" android:layout_alignTop="@+id/bamboo6"
+                 android:layout_toRightOf="@+id/bamboo6"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo7"
+                 android:src="@drawable/bamboo7" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo1" android:layout_alignParentLeft="true"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo8"
+                 android:src="@drawable/bamboo8" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo1" android:layout_toRightOf="@+id/bamboo7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/bamboo9"
+                 android:src="@drawable/bamboo9" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo2" android:layout_toRightOf="@+id/bamboo2"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/red"
+                 android:src="@drawable/red" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo3" android:layout_toRightOf="@+id/bamboo3"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/green"
+                 android:src="@drawable/green" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo6" android:layout_toRightOf="@+id/bamboo4"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/white"
+                 android:src="@drawable/white" android:layout_row="2" android:layout_column="6"
+                 android:layout_below="@+id/bamboo6" android:layout_alignLeft="@+id/crack9"
+                 android:focusableInTouchMode="false"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/east"
+                 android:src="@drawable/east" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false" android:layout_below="@+id/bamboo7"
+                 android:layout_alignParentLeft="true"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/south"
+                 android:src="@drawable/south" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false"
+                 android:layout_below="@+id/bamboo7" android:layout_toRightOf="@+id/bamboo7"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/west"
+                 android:src="@drawable/west" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false"
+                 android:layout_below="@+id/bamboo8" android:layout_toRightOf="@+id/south"/>
+    <ImageButton android:layout_width="65dp" android:layout_height="82dp" android:id="@+id/north"
+                 android:src="@drawable/north" android:layout_row="2" android:layout_column="6"
+                 android:focusableInTouchMode="false"
+                 android:layout_below="@+id/bamboo9" android:layout_toRightOf="@+id/bamboo9"/>
+</RelativeLayout>
