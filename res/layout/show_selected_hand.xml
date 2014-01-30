@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/hand_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="78.3%"
+        android:id="@+id/hand_chance"
+        android:textSize="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+    android:rowOrderPreserved="true"
+    android:columnOrderPreserved="true"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:stretchMode="columnWidth"
+    android:id="@+id/gridview"
+    android:gravity="center"
+    android:columnWidth="50dp"
+        android:layout_below="@+id/hand_name"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

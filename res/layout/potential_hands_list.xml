@@ -1,8 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" android:paddingBottom="5dp">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    <TextView
+            android:id="@+id/hand_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HERP"
+            android:textSize="18sp" android:singleLine="true"
+            android:layout_alignParentTop="true" android:layout_alignParentLeft="true">
+    </TextView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/hand_chance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DERP"
+        android:textSize="18sp" android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true">
+    </TextView>
+
+    <ImageView
+            android:id="@+id/tile1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_below="@+id/hand_name" android:layout_alignParentLeft="true" android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:cropToPadding="false">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile1" android:layout_toRightOf="@+id/tile1" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile2" android:layout_toRightOf="@+id/tile2" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile4"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile3" android:layout_toRightOf="@+id/tile3" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile5"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile4" android:layout_toRightOf="@+id/tile4" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile6"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile5" android:layout_toRightOf="@+id/tile5" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile7"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile6" android:layout_toRightOf="@+id/tile6" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile8"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile7" android:layout_toRightOf="@+id/tile7" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile9"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile8" android:layout_toRightOf="@+id/tile8" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile10"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile9" android:layout_toRightOf="@+id/tile9" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile11"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile10" android:layout_toRightOf="@+id/tile10" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile12"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile11" android:layout_toRightOf="@+id/tile11" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile13"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile12" android:layout_toRightOf="@+id/tile12" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+    <ImageView
+            android:id="@+id/tile14"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blank_tile"
+            android:layout_alignTop="@+id/tile13" android:layout_toRightOf="@+id/tile13" android:adjustViewBounds="true"
+        android:padding="1dp">
+    </ImageView>
+
+</RelativeLayout>

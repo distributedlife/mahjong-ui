@@ -13,6 +13,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SelectTile"></activity>
+        <activity android:name=".activities.SelectWind"></activity>
         <activity android:name=".activities.ShowPotentialHands"></activity>
+        <activity android:name=".activities.ShowSelectedHand"></activity>
     </application>
 </manifest>

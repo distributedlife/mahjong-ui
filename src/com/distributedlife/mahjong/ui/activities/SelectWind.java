@@ -11,7 +11,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import com.distributedlife.mahjong.ui.R;
 
-public class SelectTile  extends Activity {
+public class SelectWind extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,10 +57,6 @@ public class SelectTile  extends Activity {
         }
 
         private Integer[] tiles = {
-                R.drawable.spot1, R.drawable.spot2, R.drawable.spot3, R.drawable.spot4, R.drawable.spot5, R.drawable.spot6, R.drawable.spot7, R.drawable.spot8, R.drawable.spot9,
-                R.drawable.bamboo1, R.drawable.bamboo2, R.drawable.bamboo3, R.drawable.bamboo4, R.drawable.bamboo5, R.drawable.bamboo6, R.drawable.bamboo7, R.drawable.bamboo8, R.drawable.bamboo9,
-                R.drawable.crack1, R.drawable.crack2, R.drawable.crack3, R.drawable.crack4, R.drawable.crack5, R.drawable.crack6, R.drawable.crack7, R.drawable.crack8, R.drawable.crack9,
-                R.drawable.red, R.drawable.green, R.drawable.white,
                 R.drawable.east, R.drawable.south, R.drawable.west, R.drawable.north
         };
     }

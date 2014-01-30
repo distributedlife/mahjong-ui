@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import com.distributedlife.mahjong.ui.R;
 import com.distributedlife.mahjong.ui.clickHandlers.ShowTilesForSelection;
+import com.distributedlife.mahjong.ui.clickHandlers.ShowWindsForSelection;
+import com.distributedlife.mahjong.ui.resource.TileResourceMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,7 +17,8 @@ import java.util.Map;
 
 public class SelectHand extends Activity {
     Map<Integer, Integer> tiles = new HashMap<Integer, Integer>();
-    Map<Integer, String> resourceToTileMap = buildDrawableToTileNameMap();
+    Integer ownWind = 0;
+    Map<Integer, String> resourceToTileMap = TileResourceMap.getByResource();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,53 +40,9 @@ public class SelectHand extends Activity {
         findViewById(R.id.tile13).setOnClickListener(new ShowTilesForSelection(R.id.tile13, this));
         findViewById(R.id.tile14).setOnClickListener(new ShowTilesForSelection(R.id.tile14, this));
 
-        //TODO: own wind
+        findViewById(R.id.tileOwnWind).setOnClickListener(new ShowWindsForSelection(R.id.tileOwnWind, this));
 
         findViewById(R.id.find_hands).setOnClickListener(new RevealPotentialHands());
-    }
-
-    private Map<Integer, String> buildDrawableToTileNameMap() {
-        Map<Integer, String> map = new HashMap<Integer, String>();
-
-        map.put(R.drawable.bamboo1, "1 Bamboo");
-        map.put(R.drawable.bamboo2, "2 Bamboo");
-        map.put(R.drawable.bamboo3, "3 Bamboo");
-        map.put(R.drawable.bamboo4, "4 Bamboo");
-        map.put(R.drawable.bamboo5, "5 Bamboo");
-        map.put(R.drawable.bamboo6, "6 Bamboo");
-        map.put(R.drawable.bamboo7, "7 Bamboo");
-        map.put(R.drawable.bamboo8, "8 Bamboo");
-        map.put(R.drawable.bamboo9, "9 Bamboo");
-
-        map.put(R.drawable.crack1, "1 Crack");
-        map.put(R.drawable.crack2, "2 Crack");
-        map.put(R.drawable.crack3, "3 Crack");
-        map.put(R.drawable.crack4, "4 Crack");
-        map.put(R.drawable.crack5, "5 Crack");
-        map.put(R.drawable.crack6, "6 Crack");
-        map.put(R.drawable.crack7, "7 Crack");
-        map.put(R.drawable.crack8, "8 Crack");
-        map.put(R.drawable.crack9, "9 Crack");
-
-        map.put(R.drawable.spot1, "1 Spot");
-        map.put(R.drawable.spot2, "2 Spot");
-        map.put(R.drawable.spot3, "3 Spot");
-        map.put(R.drawable.spot4, "4 Spot");
-        map.put(R.drawable.spot5, "5 Spot");
-        map.put(R.drawable.spot6, "6 Spot");
-        map.put(R.drawable.spot7, "7 Spot");
-        map.put(R.drawable.spot8, "8 Spot");
-        map.put(R.drawable.spot9, "9 Spot");
-
-        map.put(R.drawable.red, "Red");
-        map.put(R.drawable.white, "White");
-        map.put(R.drawable.green, "Green");
-        map.put(R.drawable.east, "East");
-        map.put(R.drawable.south, "South");
-        map.put(R.drawable.west, "West");
-        map.put(R.drawable.north, "North");
-
-        return map;
     }
 
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
@@ -93,7 +52,11 @@ public class SelectHand extends Activity {
 
         int tileId = data.getIntExtra("tile", -1);
 
-        tiles.put(requestCode, tileId);
+        if (requestCode != R.id.tileOwnWind) {
+            tiles.put(requestCode, tileId);
+        } else {
+            ownWind = tileId;
+        }
 
         ((ImageButton) findViewById(requestCode)).setImageResource(tileId);
     }
@@ -109,6 +72,11 @@ public class SelectHand extends Activity {
 
             Intent intent = new Intent(view.getContext(), ShowPotentialHands.class);
             intent.putStringArrayListExtra("tiles-in-hand", tilesInHand);
+
+            if (ownWind != 0) {
+                intent.putExtra("own-wind", resourceToTileMap.get(ownWind));
+            }
+
             startActivity(intent);
         }
     }
