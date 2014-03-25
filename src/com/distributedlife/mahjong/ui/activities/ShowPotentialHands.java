@@ -15,6 +15,7 @@ import com.distributedlife.mahjong.matching.hand.HandLibrary;
 import com.distributedlife.mahjong.matching.matcher.MahJongHandMatcher;
 import com.distributedlife.mahjong.matching.matcher.Match;
 import com.distributedlife.mahjong.matching.sorter.MatchingHandSorter;
+import com.distributedlife.mahjong.reference.adapter.ArrayOfTilesToBitFieldConverter;
 import com.distributedlife.mahjong.reference.data.TileSet;
 import com.distributedlife.mahjong.ui.R;
 import com.distributedlife.mahjong.ui.clickHandlers.ShowHandLarge;
@@ -25,7 +26,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ShowPotentialHands extends ListActivity {
@@ -45,24 +45,36 @@ public class ShowPotentialHands extends ListActivity {
                 new MatchingHandFilter(HandLibrary.loadFromJson(getHandLibraryAsJson()))
         );
 
-        ArrayList<String> tilesInHand = getIntent().getStringArrayListExtra("tiles-in-hand");
+        List<String> tilesInHand = getIntent().getStringArrayListExtra("tiles-in-hand");
+        List<Long> handParts = ArrayOfTilesToBitFieldConverter.convertToBitField(tilesInHand);
 
         if (!getIntent().hasExtra("own-wind")) {
-            return mahJongHandMatcher.getMatches(tilesInHand);
+            return mahJongHandMatcher.getMatches(
+                    handParts.get(0),
+                    handParts.get(1),
+                    handParts.get(2),
+                    handParts.get(3)
+            );
         } else {
             ownWind = getIntent().getStringExtra("own-wind");
-            return mahJongHandMatcher.getMatchesWithOwnWind(tilesInHand, TileSet.Winds.valueOf(ownWind));
+            return mahJongHandMatcher.getMatchesWithOwnWind(
+                    handParts.get(0),
+                    handParts.get(1),
+                    handParts.get(2),
+                    handParts.get(3),
+                    TileSet.Winds.valueOf(ownWind)
+            );
         }
     }
 
     private JSONObject getHandLibraryAsJson() {
-        JSONObject jsonObject = null;
+        JSONObject jsonObject;
         try {
             jsonObject = new JSONObject(IOUtils.toString(ShowPotentialHands.class.getResourceAsStream("/all-hands.json")));
         } catch (JSONException e) {
-            throw new RuntimeException("Hand Library could not be parsed. Please reinstall.");
+            throw new RuntimeException("Hand Library could not be parsed. Please reinstall.", e);
         } catch (IOException e) {
-            throw new RuntimeException("Hand Library could not found. Please reinstall.");
+            throw new RuntimeException("Hand Library could not found. Please reinstall.", e);
         }
         return jsonObject;
     }
